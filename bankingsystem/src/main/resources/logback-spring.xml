@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+ <!-- Console Appender: Logs appear in terminal -->
+ <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+  <encoder>
+   <pattern>%d{yyyy-MM-dd HH:mm:ss} %-5level [%thread] %logger{36} - %msg%n</pattern>
+  </encoder>
+ </appender>
+
+ <!-- Logging Level -->
+ <root level="INFO">
+  <appender-ref ref="CONSOLE" />
+ </root>
+
+ <!-- Optional: More detailed logging for your package -->
+ <logger name="com.banking.bankingsystem" level="DEBUG" additivity="false">
+  <appender-ref ref="CONSOLE" />
+ </logger>
+
+</configuration>
